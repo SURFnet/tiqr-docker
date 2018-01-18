@@ -10,7 +10,7 @@ After installing the source code you can run:
 - `docker-compose build`
 - `docker-compose up`
 
-and browse to localhost port [84](http://localhost:84/simplesaml) or [443](https://localhost/simplesaml)
+and browse to http://localhost:84/simplesamlphp or https://localhost/simplesaml.
 
 Login:
 Username: admin
