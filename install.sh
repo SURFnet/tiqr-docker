@@ -10,6 +10,8 @@ mkdir -p web/src/simplesamlphp/config && cp -r web/src/simplesamlphp/config-temp
 mkdir -p web/src/simplesamlphp-module-authtiqr/config && cp -r web/src/simplesamlphp-module-authtiqr/config-templates/* web/src/simplesamlphp-module-authtiqr/config/
 mkdir -p web/src/simplesamlphp/metadata && cp -r web/src/simplesamlphp/metadata-templates/* web/src/simplesamlphp/metadata/
 
+rm -Rf web/assets/simplesamlphp/config
+mkdir web/assets/simplesamlphp/config
 cp web/src/simplesamlphp/config/config.php web/assets/simplesamlphp/config/config.php
 cp web/src/simplesamlphp-module-authtiqr/config/module_tiqr.php web/assets/simplesamlphp/config/module_tiqr.php
 cp web/src/simplesamlphp/config/authsources.php web/assets/simplesamlphp/config/authsources.php
