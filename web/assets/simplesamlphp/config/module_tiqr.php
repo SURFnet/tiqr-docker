@@ -35,7 +35,7 @@ $config = array(
 
     "phpqrcode.path"      => "/var/php-qr-code",
 
-    "zend.path"           => "/var/zendframework/library",
+    "zend.path"           => "/var/zendframework1/library",
     
     "apns.certificate"    => "../certificates/your_apple_push_notification_certificate.pem",
     "apns.environment"    => "sandbox",
