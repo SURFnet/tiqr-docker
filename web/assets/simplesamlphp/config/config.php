@@ -371,7 +371,7 @@ $config = array(
     /*
      * Which theme directory should be used?
      */
-    'theme.use' => 'default',
+    'theme.use' => 'themeTiqr:tiqr',
     /*
      * Default IdP for WS-Fed.
      */
