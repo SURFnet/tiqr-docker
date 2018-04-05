@@ -4,11 +4,7 @@ services:
     web:
         build: ./web
         volumes:
-              - ./web/src/simplesamlphp:/var/simplesamlphp
-              - ./web/src/simplesamlphp-module-authtiqr:/var/simplesamlphp/modules/authTiqr
-              - ./web/src/tiqr-server-libphp:/var/libTiqr
-              - ./web/src/php-qr-code:/var/php-qr-code
-              - ./web/src/zf1:/var/zendframework1
+              - ./web/src:/src
         ports:
               - "84:80"
               - "443:443"
