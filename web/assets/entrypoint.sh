@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-
-
 # Remove old directories
 if [ -d "/src/simplesamlphp" ]; then
   echo "Remove old simplesamlphp directory"
@@ -28,6 +26,11 @@ if [ -d "/src/zf1" ]; then
   rm -Rf /src/zf1
 fi
 
+if [ -d "/src/simplesamlphp-module-themetiqr" ]; then
+  echo "Remove old simplesamlphp-module-themetiqr directory"
+  rm -Rf /src/simplesamlphp-module-themetiqr
+fi
+
 # Clone repositories
 echo "Clone required repositories..."
 echo "Clone simplesamlphp ..."
@@ -40,6 +43,8 @@ echo "Clone PHP QR Code ..."
 git clone https://github.com/intern/PHP-QR-Code.git /src/php-qr-code
 echo "Clone ZendFramework 1 ..."
 git clone https://github.com/zendframework/zf1.git /src/zf1
+echo "Clone simplesamlphp module themetiqr ..."
+git clone https://github.com/SURFnet/simplesamlphp-module-themetiqr.git /src/simplesamlphp-module-themetiqr
 
 # Copy default configuration
 echo "Copy default configuration..."
@@ -60,6 +65,7 @@ ln -s /src/simplesamlphp /var/simplesamlphp
 ln -s /src/tiqr-server-libphp /var/libTiqr
 ln -s /src/php-qr-code /var/php-qr-code
 ln -s /src/zf1 /var/zendframework1
+ln -s /src/simplesamlphp-module-themetiqr /src/simplesamlphp/modules/themeTiqr
 
 # Generate ssl certificate
 echo "Generate SSL Certificate..."
