@@ -4,17 +4,41 @@ This will install the tiqr server project to develop locally using a docker imag
 
 ## Install
 
-if you install this project for the first time, run `install.sh` to install simplesamlphp and the authtiqr module, both projects will be checked out in the `web/src` directory.
+if you install this project for the first time, run:
 
-After installing the source code you can run:
 - `docker-compose build`
 - `docker-compose up`
 
-and browse to http://localhost:84/simplesaml or https://localhost/simplesaml.
+and browse to 
+- [Tiqr Demo Site (http)](http://localhost:84)
+- [Tiqr Demo Site (https)](https://localhost)
+- [SimpleSaml Admin Environment (http)](http://localhost:84/simplesaml) 
+- [SimpleSaml Admin Environment (https)](https://localhost/simplesaml)
+- [Oath Service (http)](http://localhost:85)
+- [Oath Service docs (http)](http://localhost:85/api/doc/)
 
-Login:
-Username: admin
+Login of the SimpleSaml Admin environment:  
+Username: `admin`  
 Password: password     (<= Located in config.php)
+
+The install script will install the following git repositories:
+- https://github.com/simplesamlphp/simplesamlphp
+- https://github.com/SURFnet/simplesamlphp-module-authtiqr
+- https://github.com/SURFnet/tiqr-server-libphp
+- https://github.com/intern/PHP-QR-Code
+- https://github.com/zendframework/zf1
+- https://github.com/SURFnet/simplesamlphp-module-themetiqr.git 
+- https://github.com/SURFnet/tiqr-server-simplesamlphp.git 
+- https://github.com/SURFnet/oath-service-php
+
+## Reinstall all GIT Repositories
+When you start `docker-compose` with build or up, it will give the following warning:
+
+```WARNING: The REINSTALL variable is not set. Defaulting to a blank string.```
+
+The REINSTALL environment variable can be set if you want to reinstall all repositories. To use this feature run:
+`REINSTALL=true docker-compose up`
+
 
 ## Testing with iOS
 

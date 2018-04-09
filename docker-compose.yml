@@ -4,7 +4,24 @@ services:
     web:
         build: ./web
         volumes:
-              - ./web/src:/src
+            - ./web/src:/src
+        links:
+            - mysql
         ports:
-              - "84:80"
-              - "443:443"
+            - "84:80"
+            - "85:81"
+            - "443:443"
+        environment:
+            - REINSTALL=${REINSTALL}
+
+    mysql:
+        build: ./mysql
+        ports:
+            - 3306:3306
+        volumes:
+            - ./data/db:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: "root"
+            MYSQL_DATABASE: "oathservice"
+            MYSQL_USER: "oathservice"
+            MYSQL_PASSWORD: "oathservice"
