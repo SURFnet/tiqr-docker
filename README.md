@@ -12,9 +12,9 @@ After installing the source code you can run:
 
 and browse to http://localhost:84/simplesaml or https://localhost/simplesaml.
 
-Login:
-Username: admin
-Password: password     (<= Located in config.php)
+- Login:
+- Username: admin
+- Password: password (located in `config.php`)
 
 ## Testing with iOS
 
@@ -24,8 +24,8 @@ This can be achieved using a reverse proxy. Several options exist:
 
 - [ngrok](https://ngrok.com/)
 
-	brew cask install ngrok
-	ngrok http 84
+    brew cask install ngrok
+    ngrok http 84
 
 ngrok will tunnel https traffic to your local machine on port 84 from a custom URL, e.g https://ab12cd34.ngrok.io/simplesaml/
 
@@ -38,13 +38,13 @@ Because simplesamlphp needs to be aware that traffic is being proxied (ssp gener
 
 Similar to ngrok, beame-insta-ssl is a free reverse proxy service. Install using:
 
-	npm install beame-insta-ssl
+    npm install beame-insta-ssl
 
 You need to register and create credentials. See the [docs]npm install beame-insta-ssl
 
 Build a tunnel:
 
-	beame-insta-ssl tunnel make --dst 84 --proto http
+    beame-insta-ssl tunnel make --dst 84 --proto http
 
 Again, a tunnel will be established accessible from a custom URL like https://somerandomstring.v1.p.beameio.net
 Update ssp config accordingly:
