@@ -12,9 +12,10 @@ After installing the source code you can run:
 
 and browse to http://localhost:84/simplesaml or https://localhost/simplesaml.
 
-- Login:
-- Username: admin
-- Password: password (located in `config.php`)
+Login:
+
+- Username: `admin`
+- Password: /password/ (located in `config.php`)
 
 ## Testing with iOS
 
@@ -22,7 +23,9 @@ To test with iOS devices requires the use of https on a location reachable from 
 
 This can be achieved using a reverse proxy. Several options exist:
 
-- [ngrok](https://ngrok.com/)
+#### [ngrok](https://ngrok.com/)
+
+Use your favourite package manager (e.g. [brew](brew.sh) on osx) to install ngrok:
 
     brew cask install ngrok
     ngrok http 84
@@ -34,7 +37,7 @@ Because simplesamlphp needs to be aware that traffic is being proxied (ssp gener
     'baseurlpath' => 'https://ab12cd34.ngrok.io/simplesaml/',
 
 
-- [beame-insta-ssl](https://www.beame.io/insta-ssl)
+#### [beame-insta-ssl](https://www.beame.io/insta-ssl)
 
 Similar to ngrok, beame-insta-ssl is a free reverse proxy service. Install using:
 
@@ -51,7 +54,9 @@ Update ssp config accordingly:
 
     'baseurlpath' => 'https://somerandomstring.v1.p.beameio.net/simplesaml/',
 
-- roll your own, i.e. build your own reverse proxy using SSH tunneling and nginx.
+#### Roll your own
+
+Build your own reverse proxy using SSH tunneling and nginx.
 
 See for instance https://github.com/joostd/ssh-reverse-proxy
 
