@@ -17,9 +17,10 @@ and browse to
 - [Oath Service (http)](http://localhost:85)
 - [Oath Service docs (http)](http://localhost:85/api/doc/)
 
-Login of the SimpleSaml Admin environment:  
-Username: `admin`  
-Password: password     (<= Located in config.php)
+Login:
+
+- Username: `admin`
+- Password: /password/ (located in `config.php`)
 
 The install script will install the following git repositories:
 - https://github.com/simplesamlphp/simplesamlphp
@@ -46,10 +47,12 @@ To test with iOS devices requires the use of https on a location reachable from 
 
 This can be achieved using a reverse proxy. Several options exist:
 
-- [ngrok](https://ngrok.com/)
+#### [ngrok](https://ngrok.com/)
 
-	brew cask install ngrok
-	ngrok http 84
+Use your favourite package manager (e.g. [brew](brew.sh) on osx) to install ngrok:
+
+    brew cask install ngrok
+    ngrok http 84
 
 ngrok will tunnel https traffic to your local machine on port 84 from a custom URL, e.g https://ab12cd34.ngrok.io/simplesaml/
 
@@ -58,24 +61,26 @@ Because simplesamlphp needs to be aware that traffic is being proxied (ssp gener
     'baseurlpath' => 'https://ab12cd34.ngrok.io/simplesaml/',
 
 
-- [beame-insta-ssl](https://www.beame.io/insta-ssl)
+#### [beame-insta-ssl](https://www.beame.io/insta-ssl)
 
 Similar to ngrok, beame-insta-ssl is a free reverse proxy service. Install using:
 
-	npm install beame-insta-ssl
+    npm install beame-insta-ssl
 
 You need to register and create credentials. See the [docs]npm install beame-insta-ssl
 
 Build a tunnel:
 
-	beame-insta-ssl tunnel make --dst 84 --proto http
+    beame-insta-ssl tunnel make --dst 84 --proto http
 
 Again, a tunnel will be established accessible from a custom URL like https://somerandomstring.v1.p.beameio.net
 Update ssp config accordingly:
 
     'baseurlpath' => 'https://somerandomstring.v1.p.beameio.net/simplesaml/',
 
-- roll your own, i.e. build your own reverse proxy using SSH tunneling and nginx.
+#### Roll your own
+
+Build your own reverse proxy using SSH tunneling and nginx.
 
 See for instance https://github.com/joostd/ssh-reverse-proxy
 
