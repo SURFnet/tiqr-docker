@@ -47,6 +47,9 @@ if [ "$REINSTALL" = true ] || [ ! -d "/src/simplesamlphp" ]; then
     echo "Clone required repositories..."
     echo "Clone simplesamlphp ..."
     git clone https://github.com/simplesamlphp/simplesamlphp.git /src/simplesamlphp
+    cd /src/simplesamlphp
+    git checkout v1.15.4
+    cd /src
     echo "Clone simplesamlphp module authtiqr ..."
     git clone https://github.com/SURFnet/simplesamlphp-module-authtiqr.git /src/simplesamlphp-module-authtiqr
     echo "Clone tiqr server libphp ..."
