@@ -48,7 +48,7 @@ if [ "$REINSTALL" = true ] || [ ! -d "/src/simplesamlphp" ]; then
     echo "Clone simplesamlphp ..."
     git clone https://github.com/simplesamlphp/simplesamlphp.git /src/simplesamlphp
     cd /src/simplesamlphp
-    git checkout v1.15.4
+    git checkout 401cf1d16528f1abbf3896240b83f0ddc3fe399c
     cd /src
     echo "Clone simplesamlphp module authtiqr ..."
     git clone https://github.com/SURFnet/simplesamlphp-module-authtiqr.git /src/simplesamlphp-module-authtiqr
