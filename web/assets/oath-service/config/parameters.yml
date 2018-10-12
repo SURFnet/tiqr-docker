@@ -10,7 +10,7 @@ parameters:
             dsn: 'mysql:host=mysql;dbname=oathservice'
             username: oathservice
             password: oathservice
-            table: oathservice
+            table: secret
     surfnet_oath.consumerKey: ThisKeyShouldBeSecret
     surfnet_oath.oath.ocra:
         suite: 'OCRA-1:HOTP-SHA1-6:QH10-S'
