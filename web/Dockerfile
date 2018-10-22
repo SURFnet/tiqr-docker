@@ -6,7 +6,7 @@ RUN apt-get install -y language-pack-en-base && export LC_ALL=en_US.UTF-8 && exp
 RUN apt-get install -y software-properties-common
 RUN LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
 RUN LC_ALL=C.UTF-8 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4F4EA0AAE5267A6C
-RUN apt-get update  -y
+RUN apt-get update
 RUN apt-get install -y git curl htop vim unzip ntpdate oathtool
 RUN apt-get install -y apache2
 RUN apt-get install -y apache2-doc apache2-suexec-pristine apache2-suexec-custom apache2-utils openssl-blacklist
