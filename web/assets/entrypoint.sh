@@ -85,6 +85,7 @@ if [ "$REINSTALL" = true ] || [ ! -d "/src/simplesamlphp" ]; then
     ln -s /src/php-qr-code /var/php-qr-code
     ln -s /src/zf1 /var/zendframework1
     ln -s /src/simplesamlphp-module-themetiqr /src/simplesamlphp/modules/themeTiqr
+    ln -s /src/simplesamlphp /src/demo/simplesamlphp
 
     # Generate ssl certificate
     echo "Generate SSL Certificate..."
