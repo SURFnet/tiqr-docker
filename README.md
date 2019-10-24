@@ -32,6 +32,13 @@ The install script will install the following git repositories:
 - https://github.com/SURFnet/tiqr-server-simplesamlphp.git 
 - https://github.com/SURFnet/oath-service-php
 
+Please note that the configuration for oath service won't be working out of the box. 
+Please change the following in src/simplesamlphp/config/module_tiqr.php:
+
+Before: `"apiURL" => 'http://localhost:85/',`
+
+Change to: `"apiURL" => 'http://<your ip address>:85/',`
+
 ## Reinstall all GIT Repositories
 When you start `docker-compose` with build or up, it will give the following warning:
 
