@@ -13,7 +13,12 @@
 
         Alias /simplesaml /src/simplesamlphp/www
         <Directory /src/simplesamlphp/www/>
-                Require all granted
+            Require all granted
+        </Directory>
+
+        Alias /simplesaml-stepup /src/simplesamlphp-stepup/www
+        <Directory /src/simplesamlphp-stepup/www/>
+            Require all granted
         </Directory>
 
         <Directory /src/demo/www/>
@@ -46,8 +51,12 @@
 
         Alias /simplesaml /src/simplesamlphp/www
         <Directory /src/simplesamlphp/www/>
+            Require all granted
+        </Directory>
 
-                Require all granted
+        Alias /simplesaml-stepup /src/simplesamlphp-stepup/www
+        <Directory /src/simplesamlphp-stepup/www/>
+            Require all granted
         </Directory>
 
         GnuTLSEnable on
