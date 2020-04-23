@@ -102,6 +102,7 @@ if [ "$REINSTALL" = true ] || [ ! -d "/src/simplesamlphp" ]; then
     # Copy tiqr configuration
     echo "Copy tiqr stepup configuration files..."
     cp /assets/simplesamlphp-stepup/config/config.php /src/simplesamlphp-stepup/config/config.php
+    cp /assets/simplesamlphp-stepup/config/module_tiqr.php /src/simplesamlphp-stepup/config/module_tiqr.php
     cp /assets/simplesamlphp-stepup/config/authsources.php /src/simplesamlphp-stepup/config/authsources.php
     cp /assets/simplesamlphp-stepup/metadata/saml20-idp-hosted.php /src/simplesamlphp-stepup/metadata/saml20-idp-hosted.php
     cp /assets/simplesamlphp-stepup/metadata/saml20-idp-remote.php /src/simplesamlphp-stepup/metadata/saml20-idp-remote.php
@@ -113,6 +114,7 @@ if [ "$REINSTALL" = true ] || [ ! -d "/src/simplesamlphp" ]; then
     echo "Create symlinks for all repositories..."
     mkdir -p /src/simplesamlphp/modules
     ln -s /src/simplesamlphp-module-authtiqr /src/simplesamlphp/modules/authTiqr
+    ln -s /src/simplesamlphp-module-authtiqr /src/simplesamlphp-stepup/modules/authTiqr
     ln -s /src/simplesamlphp /var/simplesamlphp
     ln -s /src/tiqr-server-libphp /var/libTiqr
     ln -s /src/php-qr-code /var/php-qr-code

@@ -34,6 +34,14 @@ $config = array(
         // Can be NULL/unset, in which case a builtin discovery service will be used.
         'discoURL' => null,
 
+        'authproc' => array(
+            10 => array(
+                'class' => 'authTiqr:Tiqr',
+                'uidAttribute' => 'uid',
+                'cnAttribute' => 'cn',
+            ),
+        ),
+
         /*
          * WARNING: SHA-1 is disallowed starting January the 1st, 2014.
          *

@@ -91,3 +91,14 @@ Build your own reverse proxy using SSH tunneling and nginx.
 
 See for instance https://github.com/joostd/ssh-reverse-proxy
 
+## Using the STEP-UP Authentication (v3)
+
+In case you want to test the step-up authentication locally, you'd want to use ngrok or something similar as described above. 
+Please note that you also need to change the url in some files, namely:
+config/authsources.php => change localhost to the ngrok domain
+metadata/saml20-idp-hosted.php => change localhost to the ngrok domain
+metadata/saml20-idp-remote.php => change all occurences of localhost to the ngrok domain
+metadata/saml20-sp-remote.php => change all occurences of localhost to the ngrok domain
+
+Do not forget to change the baseurlpath in the config!
+
